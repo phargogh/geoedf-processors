@@ -5,7 +5,7 @@ Stage0 += baseimage(image='geoedf/framework-gdal')
 Stage0 += copy(src='.',dest='/investmodel')
 
 # Install this package
-Stage0 += shell(commands=['. /opt/conda/etc/profile.d/conda.sh', 'conda activate geoedf', 'pip3 install natcap.invest', 'cd /investmodel', 'pip3 install .'])
+Stage0 += shell(commands=['. /opt/conda/etc/profile.d/conda.sh', 'conda activate geoedf', 'pip3 install natcap.invest==3.12.0', 'cd /investmodel', 'pip3 install .'])
 
 # Make scripts executable
 Stage1 += shell(commands=['echo ". /opt/conda/etc/profile.d/conda.sh" >> $SINGULARITY_ENVIRONMENT',
